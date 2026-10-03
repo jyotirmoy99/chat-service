@@ -46,3 +46,7 @@ def chat_endpoint(message:ChatRequest):
     response = chat(message.message)
     return {"response": response}
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Book API!"}
+
